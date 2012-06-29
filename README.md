@@ -8,7 +8,7 @@ Forked from the jreese's [similar script](https://github.com/jreese/pianobar-pyt
 
 Installation is very easy, just:
 
-    1. Place event.py in ~/.config/pianobar/
-    2. Make event.py executable with `chmod 755 event.py`
-    3. Add `event\_command = <homedir>/event.py` to ~/.config/pianobar/config
+1. Place event.py in ~/.config/pianobar/
+2. Make event.py executable with `chmod 755 event.py`
+3. Add `event\_command = <homedir>/event.py` to ~/.config/pianobar/config
 
