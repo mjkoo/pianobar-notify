@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-# Copyright (C) 2012 Maxwell J. Koo
+# Copyright (C) 2012 Maxwell J. Koo <mjkoo90@gmail.com>
 #
 # Based on code originally by John Reese, LeetCode.net
 #
@@ -31,6 +31,7 @@ class Event:
         """
         Initialize the pianobar event handler and dbus notify
         """
+
         obj_path = "/org/freedesktop/Notifications"
         bus_name = iface_name = "org.freedesktop.Notifications"
         bus = dbus.SessionBus()
@@ -58,6 +59,10 @@ class Event:
             self.iface.Notify("", 0, cover, title, artist_album, [], [], self.timeout)
 
     def fetch_cover(self, url, filename="~/.config/pianobar/album.jpg"):
+        """
+        Fetches album art from the URL specified by pianobar, and saves to disk.
+        """
+
         filename = path.abspath(path.expanduser(filename))
         
         if not path.exists(filename):
